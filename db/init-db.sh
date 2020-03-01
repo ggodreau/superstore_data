@@ -12,9 +12,9 @@ echo Creating customers table...
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
     CREATE TABLE customers
     (
-      customer_id varchar(50) PRIMARY KEY,
-      customer_name varchar(50),
-      segment varchar(50)
+      customer_id varchar(8) PRIMARY KEY,
+      customer_name varchar(22),
+      segment varchar(11)
     );
 EOSQL
 
