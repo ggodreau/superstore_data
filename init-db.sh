@@ -117,6 +117,6 @@ EOSQL
 
 echo Populating returns table...
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
-    COPY regions
+    COPY returns
     FROM '/var/lib/postgresql/rawcsvs/returns.csv' DELIMITER ',' CSV HEADER;
 EOSQL
