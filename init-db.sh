@@ -45,6 +45,6 @@ EOSQL
 # populate orders table
 echo Populating orders table...
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
-    COPY customers
+    COPY orders
     FROM '/var/lib/postgresql/rawcsvs/orders.csv' DELIMITER ',' CSV HEADER;
 EOSQL
