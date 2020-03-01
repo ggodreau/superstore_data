@@ -5,12 +5,20 @@ services:
 
   db:
     image: godreau/test:v7
-    restart: always
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: password
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: foo@bar.com
+      PGADMIN_DEFAULT_PASSWORD: password
+      PGADMIN_LISTEN_PORT: 8081
+    ports:
+      - 8081:8081
