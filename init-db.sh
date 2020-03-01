@@ -28,7 +28,7 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
     CREATE TABLE orders
     (
       id integer PRIMARY KEY,
-      order_id varchar(20) NOT NULL UNIQUE,
+      order_id varchar(20) NOT NULL,
       order_date date,
       ship_date date,
       ship_mode varchar(20),
