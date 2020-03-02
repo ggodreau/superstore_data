@@ -2,7 +2,7 @@
 set -e
 
 # extract data archive (all csvs) into uncompressed csvs
-tar -xzvf /var/lib/postgresql/rawdata/out_290220.gz -C /var/lib/postgresql/rawcsvs
+tar -xzvf /var/lib/postgresql/rawdata/out_010320.gz -C /var/lib/postgresql/rawcsvs
 
 ###########
 # CUSTOMERS
