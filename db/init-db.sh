@@ -64,7 +64,7 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
       product_id varchar(16) PRIMARY KEY,
       category varchar(15),
       sub_category varchar(11),
-      product_name varchar(109),
+      product_name varchar(255),
       product_cost_to_consumer money
     );
 EOSQL
